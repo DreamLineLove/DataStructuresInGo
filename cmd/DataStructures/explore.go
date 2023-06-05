@@ -25,4 +25,17 @@ func explore() {
 	all = append(all, secondaries...)
 	fmt.Printf("%q\n\n", all[0:6])
 
+	abcdef := [6]rune{
+		'a',
+		'b',
+		'c',
+		'd',
+		'e',
+		'f',
+	}
+	abc := abcdef[0:3]
+	def := abcdef[3:6]
+	fmt.Println(abc, def)
+	abc = append(abc, def...)
+	fmt.Println(abc)
 }
