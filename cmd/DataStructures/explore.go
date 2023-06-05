@@ -58,4 +58,18 @@ func explore() {
 	luxury_brands[2] = luxury_brands[3]
 	luxury_brands[3] = temp
 	fmt.Printf("%q\n", luxury_brands)
+
+	fmt.Println()
+	simpleSlice := []float32{
+		6.99,
+		10.49,
+	}
+	floatArray := []float32{
+		11.99,
+		4.99,
+		5.99,
+	}
+	fmt.Println(simpleSlice)
+	simpleSlice = append(simpleSlice, floatArray...)
+	fmt.Println(simpleSlice)
 }
