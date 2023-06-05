@@ -72,4 +72,9 @@ func explore() {
 	fmt.Println(simpleSlice)
 	simpleSlice = append(simpleSlice, floatArray...)
 	fmt.Println(simpleSlice)
+
+	fmt.Println()
+	fmt.Println(abcdef)
+	abdef := append(abcdef[0:2], abcdef[3:6]...)
+	fmt.Println(abdef)
 }
