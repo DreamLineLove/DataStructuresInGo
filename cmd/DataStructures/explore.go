@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func explore() {
 	var countries [3]string
@@ -38,4 +41,21 @@ func explore() {
 	fmt.Println(abc, def)
 	abc = append(abc, def...)
 	fmt.Println(abc)
+
+	luxury_brands := make([]string, 2, 5)
+	luxury_brands[0] = "GUCCI"
+	luxury_brands[1] = "DIOR"
+	luxury_brands = append(luxury_brands, "Louis Vuitton")
+	other_luxury_brands := []string{
+		"ARMANI EXCHANGE",
+		"Chanel",
+	}
+	armani_only, _ := strings.CutSuffix(other_luxury_brands[0], "EXCHANGE")
+	armani_final := strings.TrimSuffix(armani_only, " ")
+	luxury_brands = append(luxury_brands, armani_final, other_luxury_brands[1])
+	var temp string
+	temp = luxury_brands[2]
+	luxury_brands[2] = luxury_brands[3]
+	luxury_brands[3] = temp
+	fmt.Printf("%q\n", luxury_brands)
 }
