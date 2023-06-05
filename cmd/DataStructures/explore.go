@@ -16,4 +16,13 @@ func explore() {
 	}
 	fmt.Printf("%q\n", countries)
 
+	all := countries[:]
+	secondaries := []string{
+		"Singapore",
+		"Canada",
+		"Japan",
+	}
+	all = append(all, secondaries...)
+	fmt.Printf("%q\n\n", all[0:6])
+
 }
