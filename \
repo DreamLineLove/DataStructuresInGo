@@ -46,11 +46,13 @@ func littleStringManipulationExercise() {
 	fmt.Println()
 
 	delete(stringsFunctions, "Append")
-	instructions = append(instructions[:3], instructions[3:3]...)
-	for key, value := range stringsFunctions {
-		fmt.Println(key + "\t" + value)
+	i = 0
+	for _, value := range stringsFunctions {
+		instructions[i] = value
 	}
-
+	for _, value := range instructions {
+		fmt.Println(value)
+	}
 	fmt.Println()
 
 	leute := make([]Person, 2)
