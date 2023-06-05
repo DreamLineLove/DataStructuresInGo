@@ -77,4 +77,6 @@ func slices() {
 	fmt.Println(abcdef)
 	abdef := append(abcdef[0:2], abcdef[3:6]...)
 	fmt.Println(abdef)
+
+	fmt.Println()
 }
