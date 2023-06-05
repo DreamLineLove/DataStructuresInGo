@@ -27,5 +27,13 @@ func littleStringManipulationExercise() {
 	}
 	functionsNewLine := strings.Join(functions, ",\n")
 	intro := "These functions are part of the strings package in Go:\n"
-	fmt.Println(intro + functionsNewLine + ".")
+	fmt.Println(intro + functionsNewLine + ".\n")
+
+	instructions := make([]string, 0)
+	for _, value := range purposes {
+		instructions = append(instructions, value)
+	}
+	for _, value := range instructions {
+		fmt.Println(value)
+	}
 }
