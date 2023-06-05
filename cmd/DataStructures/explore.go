@@ -6,6 +6,10 @@ import (
 )
 
 func explore() {
+	littleStringManipulationExercise()
+}
+
+func littleStringManipulationExercise() {
 	purposes := map[string]string{
 		"Contains":     "Returns true or false whether a string contains a substring",
 		"ContainsAny":  "Returns true or false whether a string contains any of the characters from the substring",
