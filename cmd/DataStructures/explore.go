@@ -104,6 +104,9 @@ func littleStringManipulationExercise() {
 		index--
 	}
 	printNumberedLines(languages...)
+	fmt.Println()
+
+	printNumberedLines("Rinnegan", "Sharingan", "Byakugan")
 }
 
 // func JoinVariadic(separator string, operands ...string) string {
@@ -111,9 +114,14 @@ func littleStringManipulationExercise() {
 // }
 
 func printNumberedLines(operands ...string) {
-	for index, value := range operands {
-		fmt.Print(" ", index+1, ".\t")
-		fmt.Print(value)
+	// for index, value := range operands {
+	// 	fmt.Print(" ", index+1, ".\t")
+	// 	fmt.Print(value)
+	// 	fmt.Println()
+	// }
+	for i := len(operands) - 1; i >= 0; i-- {
+		fmt.Print(" ", i+1, ".\t")
+		fmt.Print(operands[i])
 		fmt.Println()
 	}
 }
