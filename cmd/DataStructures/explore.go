@@ -92,8 +92,28 @@ func littleStringManipulationExercise() {
 	}
 	languagesPopularity["Typescript"] = 75
 	languagesPopularity["Golang"] = 50
-	delete(languagesPopularity, "Rust")
+	// delete(languagesPopularity, "Rust")
 	fmt.Println(languagesPopularity)
 	fmt.Println()
 
+	languages := make([]string, 3)
+	index := 2
+	for key := range languagesPopularity {
+		// languages = append(languages, key)
+		languages[index] = key
+		index--
+	}
+	printNumberedLines(languages...)
+}
+
+// func JoinVariadic(separator string, operands ...string) string {
+//
+// }
+
+func printNumberedLines(operands ...string) {
+	for index, value := range operands {
+		fmt.Print(" ", index+1, ".\t")
+		fmt.Print(value)
+		fmt.Println()
+	}
 }
