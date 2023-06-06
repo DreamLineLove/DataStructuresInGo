@@ -107,9 +107,18 @@ func littleStringManipulationExercise() {
 	fmt.Println()
 
 	printNumberedLines("Rinnegan", "Sharingan", "Byakugan")
+	fmt.Println()
+
+	fmt.Println(performArimetic('+', 5, 5, 5))
+	fmt.Println(performArimetic('-', 100, 60, 10))
+	integers := make([]int, 3)
+	for index := range integers {
+		integers[index] = (index + 1) * 3
+	}
+	fmt.Println(performArimetic('*', integers...))
 }
 
-// func JoinVariadic(separator string, operands ...string) string {
+// func joinVariadic(separator string, operands ...string) {
 //
 // }
 
@@ -123,5 +132,40 @@ func printNumberedLines(operands ...string) {
 		fmt.Print(" ", i+1, ".\t")
 		fmt.Print(operands[i])
 		fmt.Println()
+	}
+}
+
+func performArimetic(mode rune, operands ...int) int {
+	switch mode {
+	case '+':
+		{
+			var sum int
+			for _, value := range operands {
+				sum += value
+			}
+			return sum
+		}
+	case '-':
+		{
+			result := operands[0]
+			for index, value := range operands {
+				if index > 0 {
+					result -= value
+				}
+			}
+			return result
+		}
+	case '*':
+		{
+			result := operands[0]
+			for index, value := range operands {
+				if index > 0 {
+					result *= value
+				}
+			}
+			return result
+		}
+	default:
+		return 0
 	}
 }
