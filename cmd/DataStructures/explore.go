@@ -92,7 +92,8 @@ func littleStringManipulationExercise() {
 	}
 	languagesPopularity["Typescript"] = 75
 	languagesPopularity["Golang"] = 50
-	languagesPopularity["Rust"] = 15
+	delete(languagesPopularity, "Rust")
+	fmt.Println(languagesPopularity)
 	fmt.Println()
 
 }
