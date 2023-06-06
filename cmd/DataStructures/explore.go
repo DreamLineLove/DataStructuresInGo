@@ -80,4 +80,19 @@ func littleStringManipulationExercise() {
 	newMap := make(map[string]int)
 	newMap["Columbus discovers America"] = 1492
 	fmt.Println(newMap)
+	fmt.Println()
+
+	languagesPopularity := map[string]int{
+		"Typescript": 50,
+		"Golang":     35,
+		"Rust":       5,
+	}
+	for key, value := range languagesPopularity {
+		fmt.Println(key, value)
+	}
+	languagesPopularity["Typescript"] = 75
+	languagesPopularity["Golang"] = 50
+	languagesPopularity["Rust"] = 15
+	fmt.Println()
+
 }
