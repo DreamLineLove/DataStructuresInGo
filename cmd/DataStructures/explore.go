@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/fxtlabs/primes"
+	primesPackage "github.com/fxtlabs/primes"
 	"strconv"
 	"strings"
 	"time"
@@ -135,7 +135,7 @@ func littleStringManipulationExercise() {
 func primeIndicator(integers ...int) {
 	for _, value := range integers {
 		fmt.Print("-  " + strconv.Itoa(value))
-		if !primes.IsPrime(value) {
+		if !primesPackage.IsPrime(value) {
 			fmt.Println()
 			continue
 		}
