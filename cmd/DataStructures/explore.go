@@ -129,6 +129,10 @@ func littleStringManipulationExercise() {
 	fmt.Println()
 	primeIndicator(einsBisZwanzig...)
 	fmt.Println()
+	stopAtZehn(einsBisDreizig[:], true)
+	fmt.Println()
+	stopAtZehn(einsBisDreizig[:], false)
+	fmt.Println()
 
 }
 
@@ -169,6 +173,21 @@ func printNumberedLines(operands ...string) {
 		fmt.Print(" ", i+1, ".\t")
 		fmt.Print(operands[i])
 		fmt.Println()
+	}
+}
+
+func stopAtZehn(operands []int, useBreak bool) {
+	for _, value := range operands {
+		fmt.Print("- " + strconv.Itoa(value))
+		if value%10 == 0 && useBreak {
+			// fmt.Println("\tYES")
+			break
+		} else if value%10 == 0 {
+			// fmt.Println("\tYES")
+			fmt.Println()
+			continue
+		}
+		fmt.Println("\tNot divisible")
 	}
 }
 
