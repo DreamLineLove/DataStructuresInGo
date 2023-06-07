@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -118,18 +119,29 @@ func littleStringManipulationExercise() {
 	fmt.Println(performArimetic('*', integers...))
 	fmt.Println()
 
-	var einsBisZwanzig [20]int
-	for index := range einsBisZwanzig {
-		einsBisZwanzig[index] = index + 1
+	var einsBisDreizig [30]int
+	for index := range einsBisDreizig {
+		einsBisDreizig[index] = index + 1
 	}
-	einsBisZehn := einsBisZwanzig[:10]
-	fmt.Println(einsBisZehn)
-	fmt.Println(len(einsBisZehn))
-	fmt.Println(cap(einsBisZehn))
+	einsBisZwanzig := einsBisDreizig[:20]
+	multipleOfTwoIndicator(einsBisZwanzig...)
 
 }
 
-// func primeIndicator()
+// func primeIndicator() {
+//
+// }
+
+func multipleOfTwoIndicator(integers ...int) {
+	for _, value := range integers {
+		fmt.Print("-  " + strconv.Itoa(value))
+		if value%2 != 0 {
+			fmt.Println()
+			continue
+		}
+		fmt.Print("\tPrime\n")
+	}
+}
 
 // func joinVariadic(separator string, operands ...string) {
 //
