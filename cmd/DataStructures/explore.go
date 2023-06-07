@@ -116,7 +116,20 @@ func littleStringManipulationExercise() {
 		integers[index] = (index + 1) * 3
 	}
 	fmt.Println(performArimetic('*', integers...))
+	fmt.Println()
+
+	var einsBisZwanzig [20]int
+	for index := range einsBisZwanzig {
+		einsBisZwanzig[index] = index + 1
+	}
+	einsBisZehn := einsBisZwanzig[:10]
+	fmt.Println(einsBisZehn)
+	fmt.Println(len(einsBisZehn))
+	fmt.Println(cap(einsBisZehn))
+
 }
+
+// func primeIndicator()
 
 // func joinVariadic(separator string, operands ...string) {
 //
