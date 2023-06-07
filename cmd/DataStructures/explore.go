@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/fxtlabs/primes"
 	"strconv"
 	"strings"
 	"time"
@@ -125,12 +126,23 @@ func littleStringManipulationExercise() {
 	}
 	einsBisZwanzig := einsBisDreizig[:20]
 	multipleOfTwoIndicator(einsBisZwanzig...)
+	fmt.Println()
+	primeIndicator(einsBisZwanzig...)
+	fmt.Println()
 
 }
 
-// func primeIndicator() {
-//
-// }
+func primeIndicator(integers ...int) {
+	for _, value := range integers {
+		fmt.Print("-  " + strconv.Itoa(value))
+		if !primes.IsPrime(value) {
+			fmt.Println()
+			continue
+		}
+		fmt.Print("\tPrime\n")
+	}
+
+}
 
 func multipleOfTwoIndicator(integers ...int) {
 	for _, value := range integers {
@@ -139,7 +151,7 @@ func multipleOfTwoIndicator(integers ...int) {
 			fmt.Println()
 			continue
 		}
-		fmt.Print("\tPrime\n")
+		fmt.Print("\tMultiple of Two\n")
 	}
 }
 
