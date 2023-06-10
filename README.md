@@ -13,3 +13,28 @@ In this repository, I explore various **data structures** in the Go programming 
 ```go
     $ git clone https://github.com/DreamLineLove/DataStructuresInGo.git
 ```
+- Navigate to ```cd DataStructuresInGo```
+
+### Contents
+- Arrays
+    - Working with arrays
+    - Array manual stepping
+    - Array stepping using for := range ... loop
+- Slices 
+    - Initializing slices
+    - Length, capacity
+    - Making a slice from an array
+    - Slice lopping
+    - Append()
+    - Deleting from a slice (manually reassigning a slice)
+- Maps
+    - Initializing maps
+    - Accessing maps
+    - Map looping using for := range ... loop
+    - Delete()
+- For := range ... loop
+    - Differences in behaviour depending on the type used
+    - Selected declaration of variables
+    - How to omit first and second variable
+- Make() builtin function
+- Mini-programs
