@@ -23,17 +23,19 @@ In this repository, I explore various **data structures** in the Go programming 
 ### Arrays
 - Working with arrays
 - Array manual stepping
+- Accessing and reassigning array elements
 - Array stepping using for := range ... loop
 ### Slices 
 - Initializing slices
 - Length, capacity
+- Accessing and reassigning slice elements
 - Making a slice from an array
 - Slice lopping
 - Append()
 - Deleting from a slice (manually reassigning a slice)
 ### Maps
 - Initializing maps
-- Accessing maps
+- Accessing and reassigning map element values
 - Map looping using for := range ... loop
 - Delete()
 ### For := range ... loop
