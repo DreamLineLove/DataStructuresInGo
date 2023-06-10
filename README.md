@@ -14,6 +14,10 @@ In this repository, I explore various **data structures** in the Go programming 
     $ git clone https://github.com/DreamLineLove/DataStructuresInGo.git
 ```
 - Navigate to ```cd DataStructuresInGo```
+- Run the program:
+```go
+    $ go run ./cmd/DataStructures/
+```
 
 ## Contents
 ### Arrays
