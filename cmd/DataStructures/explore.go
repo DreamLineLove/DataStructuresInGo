@@ -14,20 +14,25 @@ type Person struct {
 }
 
 func explore() {
-	// littleStringManipulationExercise()
+	// 	// littleStringManipulationExercise()
 	url := "https://www.github.com"
-	categorizeURLs(url, func(protocol string, domain string) {
-		fmt.Println("protocol:", protocol)
-		fmt.Println("domain:", domain)
+	protocol, domain, error := categorizeURLs(url, func(protocol, domain string) (string, string, error) {
+		return "protocol: " + protocol, "domain: " + domain, nil
 	})
+	if error != nil {
+		fmt.Println(error)
+	} else {
+		fmt.Println(protocol)
+		fmt.Println(domain)
+	}
 }
 
-func categorizeURLs(url string, prefixer func(string, string)) {
+func categorizeURLs(url string, prefixer func(string, string) (string, string, error)) (string, string, error) {
 	protocol, domain, found := strings.Cut(url, "://")
 	if found == false {
-		fmt.Println("The given url is not formatted correctly!")
+		return "", "", fmt.Errorf("The given url is not formatted correctly!")
 	} else {
-		prefixer(protocol, domain)
+		return prefixer(protocol, domain)
 	}
 
 }
