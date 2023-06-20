@@ -26,7 +26,10 @@ func explore() {
 		fmt.Println(domain)
 	}
 
-	finalString := joinAndPrefix(func())
+	finalString := joinAndPrefix(func(joinedString, prefix string) string {
+		return prefix + joinedString
+	}, "final output:\t", "something", "nothing", "everything")
+	fmt.Println(finalString)
 }
 
 func categorizeURLs(url string, prefixer func(string, string) (string, string, error)) (string, string, error) {
