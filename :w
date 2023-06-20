@@ -15,20 +15,10 @@ type Person struct {
 
 func explore() {
 	// littleStringManipulationExercise()
-	url := "https://www.github.com"
-	categorizeURLs(url, func(protocol string, domain string) {
-		fmt.Println("protocol:", protocol)
-		fmt.Println("domain:", domain)
-	})
+
 }
 
-func categorizeURLs(url string, prefixer func(string, string)) {
-	protocol, domain, found := strings.Cut(url, "://")
-	if found == false {
-		fmt.Println("The given url is not formatted correctly!")
-	} else {
-		prefixer(protocol, domain)
-	}
+func prefix(url string, prefixer func(string, string) (string, string)) {
 
 }
 
