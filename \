@@ -37,10 +37,6 @@ func categorizeURLs(url string, prefixer func(string, string) (string, string, e
 
 }
 
-func joinAndPrefix(prefixer func(string, string) string, strings ...string) string {
-
-}
-
 func littleStringManipulationExercise() {
 	stringsFunctions := map[string]string{
 		"Contains":     "Returns true or false whether a string contains a substring",
