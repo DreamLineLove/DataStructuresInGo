@@ -14,7 +14,20 @@ type Person struct {
 }
 
 func explore() {
-	legacy()
+	// legacy()
+
+	codeGeassInitialization := map[string]string{
+		"zero":            "Lelouch vi Britannia",
+		"knight_of_seven": "Suzaku Kururugi",
+	}
+	fmt.Println(codeGeassInitialization["zero"])
+	fmt.Println(codeGeassInitialization["knight_of_seven"])
+
+	// nil map
+	// var cg2 map[string]string
+	cg2 := make(map[string]string)
+	cg2["Weinberg"] = "A prominent family in the echelons of Brittanian nobility. A notable member include Lord Gino Weinberg, the Knight of Six."
+	fmt.Println(cg2)
 }
 
 func legacy() {
