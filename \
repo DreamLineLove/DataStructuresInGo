@@ -24,9 +24,8 @@ func explore() {
 	fmt.Println(codeGeassInitialization["knight_of_seven"])
 	var temp string = codeGeassInitialization["knight_of_seven"]
 	delete(codeGeassInitialization, "knight_of_seven")
-	fmt.Println("\"" + codeGeassInitialization["knight_of_seven"] + "\"")
+	fmt.Println("\"", codeGeassInitialization["knight_of_seven"], "\"")
 	codeGeassInitialization["knight_of_zero"] = temp
-	fmt.Println("\"" + codeGeassInitialization["knight_of_zero"] + "\"")
 
 	// nil map
 	// var cg2 map[string]string
