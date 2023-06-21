@@ -38,15 +38,28 @@ func explore() {
 		"everything",
 	}
 	slice3 := make([]string, 3, 3)
+	// for i := 0; i < 3; i++ {
+	// 	slice3[i] = "placeholder"
+	// }
 	for index, value := range slice2 {
 		slice3[index] = value + strconv.Itoa(index)
 	}
+	array1 := []string{
+		"placeholder",
+		"placeholder",
+		"placeholder",
+	}
+	slice3 = append(slice3, array1...)
 	for i := 0; i < 3; i++ {
 		slice1 = append(slice1, slice2[i])
 	}
 	fmt.Println()
 	fmt.Println(slice1)
 	slice1 = append(slice1, slice3...)
+	fmt.Println(slice1)
+	slice1 = append(slice1[0:2], slice1[3:]...)
+	fmt.Println(slice1)
+	slice1 = append(slice1[0:4], slice1[5:]...)
 	fmt.Println(slice1)
 }
 
