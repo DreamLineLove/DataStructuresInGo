@@ -14,7 +14,11 @@ type Person struct {
 }
 
 func explore() {
-	// 	// littleStringManipulationExercise()
+	legacy()
+}
+
+func legacy() {
+	// littleStringManipulationExercise()
 	url := "https://www.github.com"
 	protocol, domain, error := categorizeURLs(url, func(protocol, domain string) (string, string, error) {
 		return "protocol: " + protocol, "domain: " + domain, nil
@@ -69,6 +73,7 @@ func explore() {
 	fmt.Println(slice1)
 	fmt.Println("len:", len(slice1))
 	fmt.Println("capacity:", cap(slice1))
+
 }
 
 func categorizeURLs(url string, prefixer func(string, string) (string, string, error)) (string, string, error) {
