@@ -55,12 +55,20 @@ func explore() {
 	}
 	fmt.Println()
 	fmt.Println(slice1)
+	fmt.Println("len:", len(slice1))
+	fmt.Println("capacity:", cap(slice1))
 	slice1 = append(slice1, slice3...)
 	fmt.Println(slice1)
+	fmt.Println("len:", len(slice1))
+	fmt.Println("capacity:", cap(slice1))
 	slice1 = append(slice1[0:2], slice1[3:]...)
 	fmt.Println(slice1)
+	fmt.Println("len:", len(slice1))
+	fmt.Println("capacity:", cap(slice1))
 	slice1 = append(slice1[0:4], slice1[5:]...)
 	fmt.Println(slice1)
+	fmt.Println("len:", len(slice1))
+	fmt.Println("capacity:", cap(slice1))
 }
 
 func categorizeURLs(url string, prefixer func(string, string) (string, string, error)) (string, string, error) {
