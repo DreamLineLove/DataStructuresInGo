@@ -42,5 +42,8 @@ In this repository, I explore various **data structures** in the Go programming 
 - Differences in behaviour depending on the type used
 - Selected declaration of variables
 - How to omit first and second variable
+### Function literals and higher-order functions
+- Concept and rules of using a function literal
+- Concept and rules of defining a higher-order function inside another function's signature (parameter)
 ### Make() builtin function
 ### Mini-programs
