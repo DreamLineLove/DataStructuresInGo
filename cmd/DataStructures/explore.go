@@ -30,6 +30,24 @@ func explore() {
 		return prefix + joinedString
 	}, "final output:\t", "something", "nothing", "everything")
 	fmt.Println(finalString)
+
+	var slice1 []string
+	slice2 := []string{
+		"something",
+		"nothing",
+		"everything",
+	}
+	slice3 := make([]string, 3, 3)
+	for index, value := range slice2 {
+		slice3[index] = value + strconv.Itoa(index)
+	}
+	for i := 0; i < 3; i++ {
+		slice1 = append(slice1, slice2[i])
+	}
+	fmt.Println()
+	fmt.Println(slice1)
+	slice1 = append(slice1, slice3...)
+	fmt.Println(slice1)
 }
 
 func categorizeURLs(url string, prefixer func(string, string) (string, string, error)) (string, string, error) {
