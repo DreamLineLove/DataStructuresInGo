@@ -16,6 +16,9 @@ type Person struct {
 func explore() {
 	// legacy()
 
+}
+
+func legacy() {
 	codeGeassInitialization := map[string]string{
 		"zero":            "Lelouch vi Britannia",
 		"knight_of_seven": "Suzaku Kururugi",
@@ -33,9 +36,6 @@ func explore() {
 	cg2 := make(map[string]string)
 	cg2["Weinberg"] = "A prominent family in the echelons of Brittanian nobility. A notable member include Lord Gino Weinberg, the Knight of Six."
 	fmt.Println(cg2)
-}
-
-func legacy() {
 	// littleStringManipulationExercise()
 	url := "https://www.github.com"
 	protocol, domain, error := categorizeURLs(url, func(protocol, domain string) (string, string, error) {
