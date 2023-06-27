@@ -20,6 +20,18 @@ func explore() {
 	row3 := [5]int{2, 1, -1, 3, -11}
 	row4 := [5]int{1, -3, 2, 7, -5}
 	mainArray := [4][5]int{row1, row2, row3, row4}
+	printInMatrixFormat(mainArray)
+	fmt.Println()
+	fmt.Println()
+	fmt.Println()
+	row1 = [5]int{1, 0, 0, 2, -5}
+	row2 = [5]int{0, 1, 0, -3, 2}
+	row3 = [5]int{0, 0, 1, -2, 3}
+	row4 = [5]int{0, 0, 0, 0, 0}
+	printInMatrixFormat(mainArray)
+}
+
+func printInMatrixFormat(mainArray [4][5]int) {
 	for index := range mainArray {
 		fmt.Print("[")
 		for i, v := range mainArray[index] {
@@ -31,11 +43,6 @@ func explore() {
 		}
 		fmt.Println("]")
 	}
-	row1 = [5]int{1, 0, 0, 2, -5}
-	row2 = [5]int{0, 1, 0, -3, 2}
-	row3 = [5]int{0, 0, 1, -2, 3}
-	row4 = [5]int{0, 0, 0, 0, 0}
-
 }
 
 func legacy() {
