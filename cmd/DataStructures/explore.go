@@ -31,6 +31,10 @@ func explore() {
 		}
 		fmt.Println("]")
 	}
+	row1 = [5]int{1, 0, 0, 2, -5}
+	row2 = [5]int{0, 1, 0, -3, 2}
+	row3 = [5]int{0, 0, 1, -2, 3}
+	row4 = [5]int{0, 0, 0, 0, 0}
 
 }
 
