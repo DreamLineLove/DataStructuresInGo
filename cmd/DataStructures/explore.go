@@ -15,6 +15,21 @@ type Person struct {
 
 func explore() {
 	// legacy()
+	row1 := [5]int{1, 1, 2, -5, 3}
+	row2 := [5]int{2, 5, -1, -9, -3}
+	row3 := [5]int{2, 1, -1, 3, -11}
+	row4 := [5]int{1, -3, 2, 7, -5}
+	mainArray := [4][5]int{row1, row2, row3, row4}
+	for index := range mainArray {
+		for i, v := range mainArray[index] {
+			if i == 4 {
+				fmt.Print("\t|\t", v)
+			} else {
+				fmt.Print("\t", v, "\t")
+			}
+		}
+		fmt.Println()
+	}
 
 }
 
