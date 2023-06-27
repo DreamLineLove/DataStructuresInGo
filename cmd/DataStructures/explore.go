@@ -21,14 +21,15 @@ func explore() {
 	row4 := [5]int{1, -3, 2, 7, -5}
 	mainArray := [4][5]int{row1, row2, row3, row4}
 	for index := range mainArray {
+		fmt.Print("[")
 		for i, v := range mainArray[index] {
 			if i == 4 {
-				fmt.Print("\t|\t", v)
+				fmt.Print("\t|\t", v, "\t")
 			} else {
 				fmt.Print("\t", v, "\t")
 			}
 		}
-		fmt.Println()
+		fmt.Println("]")
 	}
 
 }
