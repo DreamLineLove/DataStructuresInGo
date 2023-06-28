@@ -28,6 +28,13 @@ func explore() {
 	row4 = [5]int{0, 0, 0, 0, 0}
 	mainArray = [4][5]int{row1, row2, row3, row4}
 	printInMatrixFormat(mainArray)
+	fmt.Println()
+	row1 = [5]int{1, 0, 0, 1, 1}
+	row2 = [5]int{0, 1, 0, -1, 3}
+	row3 = [5]int{0, 0, 1, 1, 2}
+	row4 = [5]int{0, 0, 0, 0, 0}
+	mainArray = [4][5]int{row1, row2, row3, row4}
+	printInMatrixFormat(mainArray)
 }
 
 func printInMatrixFormat(mainArray [4][5]int) {
