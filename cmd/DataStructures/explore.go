@@ -33,13 +33,22 @@ func outerfunc() string {
 	}()
 }
 
+func return_a_func() func() string {
+	return func() string {
+		return "this is a sample string"
+	}
+}
+
+func afunc() string {
+	return "this is from afunc()"
+}
+
 func explore() {
-	url := "https://github.com"
-	protocol, domain := separateProtocolAndDomain(url)
-	func() {
-		fmt.Println("protocol: ", protocol)
-		fmt.Println("domain: ", domain)
-	}()
+	afunc := afunc()
+	fmt.Println(afunc)
+	funcholder := return_a_func()
+	val := funcholder()
+	fmt.Println(val)
 	// legacy()
 }
 
@@ -58,6 +67,13 @@ func printInMatrixFormat(mainArray [4][5]int) {
 }
 
 func legacy() {
+	url := "https://github.com"
+	protocol, domain := separateProtocolAndDomain(url)
+	func() {
+		fmt.Println("protocol: ", protocol)
+		fmt.Println("domain: ", domain)
+	}()
+
 	row1 := [5]int{1, 1, 2, -5, 3}
 	row2 := [5]int{2, 5, -1, -9, -3}
 	row3 := [5]int{2, 1, -1, 3, -11}
@@ -97,7 +113,7 @@ func legacy() {
 	cg2["Weinberg"] = "A prominent family in the echelons of Brittanian nobility. A notable member include Lord Gino Weinberg, the Knight of Six."
 	fmt.Println(cg2)
 	// littleStringManipulationExercise()
-	url := "https://www.github.com"
+	url = "https://www.github.com"
 	protocol, domain, error := categorizeURLs(url, func(protocol, domain string) (string, string, error) {
 		return "protocol: " + protocol, "domain: " + domain, nil
 	})
