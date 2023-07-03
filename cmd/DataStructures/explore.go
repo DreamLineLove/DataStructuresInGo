@@ -28,6 +28,14 @@ func separateProtocolAndDomain(url string) (string, string) {
 	return protocol, domain
 }
 
+func outerfunc() string {
+	return innerfunc()
+}
+
+func innerfunc() string {
+	return "this is a string"
+}
+
 func explore() {
 	url := "https://github.com"
 	protocol, domain := separateProtocolAndDomain(url)
