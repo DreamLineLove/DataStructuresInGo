@@ -16,7 +16,7 @@ type Person struct {
 func separateProtocolAndDomain(url string) (string, string) {
 	urlCopy := strings.Clone(url)
 
-	protocol, domain := func() (string, string) {
+	return func() (string, string) {
 		protocol, domain, found := strings.Cut(urlCopy, "://")
 		if found {
 			return protocol, domain
@@ -24,16 +24,13 @@ func separateProtocolAndDomain(url string) (string, string) {
 			return "", ""
 		}
 	}()
-
-	return protocol, domain
 }
 
 func outerfunc() string {
-	return innerfunc()
-}
-
-func innerfunc() string {
-	return "this is a string"
+	str := "this is a "
+	return func() string {
+		return str + "a sample string"
+	}()
 }
 
 func explore() {
