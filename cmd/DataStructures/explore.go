@@ -15,6 +15,23 @@ type Person struct {
 
 func explore() {
 	// legacy()
+}
+
+func printInMatrixFormat(mainArray [4][5]int) {
+	for index := range mainArray {
+		fmt.Print("[")
+		for i, v := range mainArray[index] {
+			if i == 4 {
+				fmt.Print(" | ", v, " ")
+			} else {
+				fmt.Print(" ", v, " ")
+			}
+		}
+		fmt.Println("]")
+	}
+}
+
+func legacy() {
 	row1 := [5]int{1, 1, 2, -5, 3}
 	row2 := [5]int{2, 5, -1, -9, -3}
 	row3 := [5]int{2, 1, -1, 3, -11}
@@ -35,23 +52,7 @@ func explore() {
 	row4 = [5]int{0, 0, 0, 0, 0}
 	mainArray = [4][5]int{row1, row2, row3, row4}
 	printInMatrixFormat(mainArray)
-}
 
-func printInMatrixFormat(mainArray [4][5]int) {
-	for index := range mainArray {
-		fmt.Print("[")
-		for i, v := range mainArray[index] {
-			if i == 4 {
-				fmt.Print(" | ", v, " ")
-			} else {
-				fmt.Print(" ", v, " ")
-			}
-		}
-		fmt.Println("]")
-	}
-}
-
-func legacy() {
 	codeGeassInitialization := map[string]string{
 		"zero":            "Lelouch vi Britannia",
 		"knight_of_seven": "Suzaku Kururugi",
