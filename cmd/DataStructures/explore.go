@@ -13,7 +13,28 @@ type Person struct {
 	birthmonth time.Month
 }
 
+func separateProtocolAndDomain(url string) (string, string) {
+	urlCopy := strings.Clone(url)
+
+	protocol, domain := func() (string, string) {
+		protocol, domain, found := strings.Cut(urlCopy, "://")
+		if found {
+			return protocol, domain
+		} else {
+			return "", ""
+		}
+	}()
+
+	return protocol, domain
+}
+
 func explore() {
+	url := "https://github.com"
+	protocol, domain := separateProtocolAndDomain(url)
+	func() {
+		fmt.Println("protocol: ", protocol)
+		fmt.Println("domain: ", domain)
+	}()
 	// legacy()
 }
 
