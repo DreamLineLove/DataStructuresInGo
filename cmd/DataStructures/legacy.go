@@ -123,7 +123,8 @@ func legacy() {
 
 	// littleStringManipulationExercise()
 	fmt.Println()
-	fmt.Println("trying to print a constant value: ", Value)
+	fmt.Println("trying to print a constant value:", Value)
+	fmt.Println("iota thing:", refrain_from_taking_life, refrain_from_stealing, refrain_from_illicit_sex, refrain_from_telling_lies, refrain_from_taking_intoxicants)
 }
 
 func categorizeURLs(url string, prefixer func(string, string) (string, string, error)) (string, string, error) {
