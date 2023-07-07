@@ -66,7 +66,6 @@ func legacy() {
 	cg2 := make(map[string]string)
 	cg2["Weinberg"] = "A prominent family in the echelons of Brittanian nobility. A notable member include Lord Gino Weinberg, the Knight of Six."
 	fmt.Println(cg2)
-	// littleStringManipulationExercise()
 	url := "https://www.github.com"
 	protocol, domain, error := categorizeURLs(url, func(protocol, domain string) (string, string, error) {
 		return "protocol: " + protocol, "domain: " + domain, nil
@@ -122,6 +121,9 @@ func legacy() {
 	fmt.Println("len:", len(slice1))
 	fmt.Println("capacity:", cap(slice1))
 
+	// littleStringManipulationExercise()
+	fmt.Println()
+	fmt.Println("trying to print a constant value: ", Value)
 }
 
 func categorizeURLs(url string, prefixer func(string, string) (string, string, error)) (string, string, error) {
