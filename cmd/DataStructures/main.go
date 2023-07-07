@@ -2,5 +2,6 @@ package main
 
 func main() {
 	// slices()
-	explore()
+	// explore()
+	legacy()
 }
