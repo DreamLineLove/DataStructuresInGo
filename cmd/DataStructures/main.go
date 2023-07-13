@@ -3,5 +3,6 @@ package main
 func main() {
 	// slices()
 	// explore()
-	legacy()
+	// legacy()
+	mutex()
 }
